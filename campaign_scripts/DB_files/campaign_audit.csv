@@ -1,0 +1,81 @@
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+a629e387-55e0-4501-8d54-5d0788b4992b,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-23 16:56:37,2026-02-23 16:56:37,0.009836,1000,990.0,sms,
+b1fa370d-9e0e-442b-8518-4718d70cfff7,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:27:18,2026-02-24 14:27:18,0.013081,1000,0.0,sms,[Errno 2] No such file or directory: 'sms_1124.csv'
+b92d8309-9d33-4d90-8307-fc2aa0befe16,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:29:20,2026-02-24 14:29:20,0.009277,1000,0.0,sms,[Errno 2] No such file or directory: 'sms_1124.csv'
+1c978011-929b-42bb-927c-331e7969ea47,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:29:58,2026-02-24 14:29:58,0.009129,1000,0.0,sms,[Errno 2] No such file or directory: 'sms_1124.csv'
+883d7474-fa89-4846-add2-6edf9bb0e4c5,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:32:19,2026-02-24 14:32:19,0.010985,1000,0.0,sms,[Errno 2] No such file or directory: 'sms_1124.csv'
+ea2aa1c6-d532-4724-986b-58b07f493d1f,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:33:18,2026-02-24 14:33:18,0.012219,1000,0.0,sms,[Errno 2] No such file or directory: 'sms_1124.csv'
+f1e22ffc-ba88-46fe-86b8-ba85a85a43d9,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:34:47,2026-02-24 14:34:47,0.010874,1000,0.0,sms,file not proper
+48f1a650-d360-47a3-92cf-7d9078c1b9d8,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:37:23,2026-02-24 14:37:23,0.010006,1000,0.0,sms,file not proper
+6a9fd678-fa9a-4c1f-aa60-3a2dfdb00a5f,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:37:41,2026-02-24 14:37:41,0.011646,1000,0.0,sms,file not proper
+c0de6541-3859-4741-9d14-7e87bebef3ea,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:38:08,2026-02-24 14:38:08,0.010742,1000,0.0,sms,file not proper
+c28e8b03-3d82-4642-9429-e7e1afb0f5d5,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:38:24,2026-02-24 14:38:24,0.011107,1000,0.0,sms,file not proper
+fd2f0203-a19d-46f9-9112-f572275c527b,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:38:52,2026-02-24 14:38:52,0.015778,1000,0.0,sms,file not proper
+2cc98d57-4b87-4e86-a3b5-ea74c162a55d,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:39:18,2026-02-24 14:39:18,0.013936,1000,0.0,sms,file not proper
+ea831335-ef3e-4813-9af4-e5c45f432cc5,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:39:46,2026-02-24 14:39:46,0.011953,1000,0.0,sms,file not proper
+4cead5c8-1b12-4ee0-90d9-11b1a9b1a949,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:40:24,2026-02-24 14:40:24,0.010166,1000,0.0,sms,'DataFrame' object has no attribute 'hea'
+539224ff-8aaa-40e4-8336-1c861d0abb2d,forward_integration.py,sms_1124.csv,failed,2026-02-24 14:40:30,2026-02-24 14:40:30,0.01131,1000,0.0,sms,file not proper
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+95cae94b-3b92-4835-ad6a-3dc27025e064,forward_integration.py,sms_1124.csv,failed,2026-02-24 18:31:45,2026-02-24 18:31:45,0.026848,1000,0,sms,file not proper
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+8501ee44-28bc-4f50-83c7-6457d3b1fe6c,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 13:49:02,2026-02-25 13:49:02,0.020272,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+59f76c6c-ce36-4f3d-abe4-1e62fa9dcb4d,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 13:50:37,2026-02-25 13:50:37,0.010624,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+7ed9e7b8-0768-4fcc-8a4a-eee21a3352d8,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 13:51:47,2026-02-25 13:51:51,3.573931,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+9b46860e-58b8-493c-9acf-bf2e42fe120b,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 13:54:25,2026-02-25 13:54:29,3.845735,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+153fe79e-e01a-4e73-81c8-a9dbb5033c3b,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 13:57:07,2026-02-25 13:57:10,3.428068,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+97a40781-1c7e-4134-834a-c0a2d87bd126,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 13:57:57,2026-02-25 13:58:00,3.32677,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+778bead8-94a5-450a-bec8-355602024b11,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 13:58:58,2026-02-25 13:59:02,3.546233,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+c3b1179d-cbd2-47a3-bc61-ee90050af5b8,forward_integration.py,sms_1124.csv,failed,2026-02-25 14:09:22,2026-02-25 14:09:26,3.39404,1000,0,sms,'error'
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+fa9c71a0-59b5-416d-9a39-839f008e5016,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 14:10:38,2026-02-25 14:10:45,6.87482,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+cecf74e5-b4f8-4654-907c-78f58543b84a,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 14:30:06,2026-02-25 14:30:13,6.425166,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+4a8e6270-27b0-4bcb-bd82-98c404afd066,forward_integration.py,sms_1124.csv,failed,2026-02-25 16:59:43,2026-02-25 16:59:43,0.111343,1000,0,sms,name 'export_validation' is not defined
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+5b82cbcc-65fe-4ff6-b524-efacd1d69d51,forward_integration.py,sms_1124.csv,failed,2026-02-25 17:00:43,2026-02-25 17:00:43,0.099782,1000,0,sms,cannot access local variable 'export_validation_status' where it is not associated with a value
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+8a423408-765e-4d4f-9cc1-1ddaabbfb89f,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 17:01:28,2026-02-25 17:01:28,0.100622,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+bd8dfe2b-976f-467f-97c4-9377cbd49e78,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 17:02:16,2026-02-25 17:02:16,0.103505,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+6ef76f4b-e4ba-4e6a-9b07-1ace597b34b0,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 17:02:28,2026-02-25 17:02:28,0.093913,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+e262d514-dc72-4088-a2aa-f60eac34d172,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 17:02:53,2026-02-25 17:02:53,0.094315,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+ef3a8c86-33f9-4915-9223-a44b8c743102,forward_integration.py,sms_1124.csv,failed,2026-02-25 17:06:36,2026-02-25 17:06:36,0.116354,1000,0,sms,cannot access local variable 'export_validation_status' where it is not associated with a value
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+fb65761f-d4df-45a5-b7e2-f03366d4a716,forward_integration.py,sms_1124.csv,failed,2026-02-25 17:08:52,2026-02-25 17:08:52,0.099643,1000,0,sms,cannot access local variable 'export_validation_status' where it is not associated with a value
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+efaa628e-e5c4-4d84-9441-f332b9511bc2,forward_integration.py,sms_1124.csv,failed,2026-02-25 17:10:08,2026-02-25 17:10:08,0.106002,1000,0,sms,cannot access local variable 'export_validation_status' where it is not associated with a value
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+27ac49f3-ba1a-4a92-910b-4bb33ee3d34f,forward_integration.py,sms_1124.csv,failed,2026-02-25 17:15:31,2026-02-25 17:15:31,0.102413,1000,0,sms,cannot access local variable 'export_validation_status' where it is not associated with a value
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+d2cc9ca4-2675-431a-8501-f6806752266e,forward_integration.py,sms_1124.csv,failed,2026-02-25 17:17:16,2026-02-25 17:17:16,0.104796,1000,0,sms,cannot access local variable 'export_validation_status' where it is not associated with a value
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+e6e2ffbe-b478-488f-9b05-76eaa22e3153,forward_integration.py,sms_1124.csv,failed,2026-02-25 17:18:33,2026-02-25 17:18:33,0.108743,1000,0,sms,cannot access local variable 'export_validation_status' where it is not associated with a value
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+8c7ef2af-016d-4c16-8946-e7e7d56aa946,forward_integration.py,sms_1124.csv,failed,2026-02-25 17:18:44,2026-02-25 17:18:44,0.096065,1000,0,sms,cannot access local variable 'export_validation_status' where it is not associated with a value
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+e53548b6-287d-457e-b8cc-5a52749f3c0a,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 17:20:35,2026-02-25 17:20:36,0.104507,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+4934a456-224a-498f-9ecd-0a95f4aa1b19,forward_integration.py,sms_1124.csv,failed,2026-02-25 17:44:19,2026-02-25 17:44:19,0.113809,1000,0,sms,"can only concatenate str (not ""list"") to str"
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+290f3808-74c4-4d94-9f52-c4c47e895de6,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 17:44:48,2026-02-25 17:44:51,3.667482,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+d9c5631a-e29d-4cfc-8e61-40ebe245b5fe,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 17:45:47,2026-02-25 17:45:51,3.828485,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+06f6ec31-4234-4d90-91dd-4de5ce1c02e3,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 17:50:07,2026-02-25 17:50:10,3.516639,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+d4a5c159-8080-4f59-a526-93f5f2f32913,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 17:54:14,2026-02-25 17:54:14,0.10107,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+79e0aed6-2390-4590-bbb9-bbb0d8e173fa,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 19:45:40,2026-02-25 19:45:41,0.283365,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+14e81ece-6342-45c7-9bcf-9dc87d7ab1d6,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 19:47:04,2026-02-25 19:47:04,0.095457,1000,990,sms,

@@ -1,0 +1,4 @@
+DEBUG:__main__:This is Start of the Log file
+INFO:__main__:this is info type of line
+WARNING:__main__:And this, too
+ERROR:__main__:Error line 

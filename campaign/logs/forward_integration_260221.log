@@ -1,0 +1,16 @@
+'2wx INFO:__main__:
+
+Execution Started of forward integration at: 2026-02-21 17:26:28.658419 
+INFO:__main__:Module_no : 01
+INFO:__main__:Module_Name : Read_Export_DIR
+
+INFO:__main__:Total Number of CSV Files found: 1
+
+INFO:__main__:File read at index 0 : 
+ 
+INFO:export_process:Input file path : /Users/balkrishna/Documents/Projects/market_place_360/campaign/export/sms_1124.csv
+INFO:export_process:
+###---- Execution Started for Following File ----###
+ filename = sms_1124.csv
+ Channel = sms
+INFO:campaign_audit: Created folder: /Users/balkrishna/Documents/Projects/market_place_360/campaign_scripts/DB_files

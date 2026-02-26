@@ -1,0 +1,40 @@
+INFO:__main__:
+
+Execution Started of forward integration at: 2026-02-24 18:31:45.496742 
+INFO:__main__:Module_no : 01
+INFO:__main__:Module_Name : Read_Export_DIR
+
+INFO:__main__:Total Number of CSV Files found: 1
+
+INFO:__main__:File read at index 0 : 
+ 
+INFO:export_process:Input file path : /Users/balkrishna/Documents/Projects/market_place_360/campaign/export/sms_1124.csv
+INFO:export_process:
+###---- Execution Started for Following File ----###
+ filename = sms_1124.csv
+ Channel = sms
+INFO:campaign_audit: Created folder: /Users/balkrishna/Documents/Projects/market_place_360/campaign_scripts/DB_files
+INFO:campaign_audit:Folder ready: /Users/balkrishna/Documents/Projects/market_place_360/campaign_scripts/DB_files
+INFO:campaign_audit:<bound method NDFrame.head of                                      id             script_name      filename  ... output_record_count channels error_message
+0  95cae94b-3b92-4835-ad6a-3dc27025e064  forward_integration.py  sms_1124.csv  ...                          sms              
+
+[1 rows x 11 columns]>
+INFO:campaign_audit:Campaign Started - Job ID:95cae94b-3b92-4835-ad6a-3dc27025e064
+INFO:campaign_audit:   Input Records:1000
+INFO:campaign_audit:   Channels:sms
+INFO:campaign_audit:   Start time:2026-02-24 18:31:45.497208
+INFO:export_process:file already shared for logging with job id 95cae94b-3b92-4835-ad6a-3dc27025e064
+INFO:export_process:Campaign file processing will start below
+INFO:camp_utils:Moved /Users/balkrishna/Documents/Projects/market_place_360/campaign/export/sms_1124.csv -> /Users/balkrishna/Documents/Projects/market_place_360/campaign/inprogress_campaign/sms_1124.csv_20260224_18:31:45
+INFO:export_process:sms_1124.csv
+INFO:export_process:
+    id first_name   last_name  ...        current_product                       target_product                        communication_id
+0   1     Marlin   Kinneally  ...  Cinnamon Raisin Bread                          Falafel Mix  1d2eec07-7137-4c0d-947b-6ba2f83e551f-1
+1   2     Donnie  MacCarrick  ...    Kettle Corn Popcorn                  Beef Stroganoff Mix  1d2eec07-7137-4c0d-947b-6ba2f83e551f-2
+2   3      Urson       Thody  ...  Cinnamon Sugar Donuts                  Caramel Apple Chips  1d2eec07-7137-4c0d-947b-6ba2f83e551f-3
+3   4      Burke    Bodechon  ...    Caramel Apple Taffy  Eco-Friendly Stainless Steel Straws  1d2eec07-7137-4c0d-947b-6ba2f83e551f-4
+4   5    Yolande       Szach  ...      Fridge Magnet Set               Digital Drawing Tablet  1d2eec07-7137-4c0d-947b-6ba2f83e551f-5
+
+[5 rows x 8 columns]
+INFO:__main__:
+### This will be printed post execution of export_process() function 
