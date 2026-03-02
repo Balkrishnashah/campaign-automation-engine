@@ -8,37 +8,16 @@ import logging
 logger = logging.getLogger(__name__)
 
 import uuid
-
+from db_config import conn
 
 
 class CampaignAuditor:
     
-    def __init__(self, audit_file=f'{PARENT_DIR}/campaign_scripts/DB_files/campaign_audit.csv'):
-        self.audit_file = Path(audit_file)
+    def __init__(self):
+        # self.audit_file = Path(audit_file)
         self.job_id =str(uuid.uuid4())
         self.start_time = datetime.now()
         
-        folder = os.path.dirname(self.audit_file)
-        if folder:  # Only if there's a folder in the path
-            os.makedirs(folder, exist_ok=True)
-            logger.info(f" Created folder: {folder}")
-            
-        # ✅ Create folder        
-        self.audit_file.parent.mkdir(parents=True, exist_ok=True)
-        logger.info(f"Folder ready: {self.audit_file.parent}")
-        
-        # ✅ Create file with header if not exists
-        if not self.audit_file.exists():
-            header_cols = [
-                "id","script_name","filename","status","start_time","end_time",
-                "execution_time_seconds","input_record_count",
-                "output_record_count","channels","error_message"
-            ]
-
-            pd.DataFrame(columns=header_cols).to_csv(self.audit_file, index=False)
-
-            logger.info(f"Audit file created with header: {self.audit_file}")
-    
 
     
         
@@ -47,31 +26,38 @@ class CampaignAuditor:
         self.job_id = self.job_id
         # self.start_time = datetime.now()
         
-        entry = pd.DataFrame([{
-            'id':self.job_id,
-            'script_name':script_name,
-            'filename':filename,
-            'status':'START',
-            'start_time':self.start_time.strftime('%Y-%m-%d %H:%M:%S'),
-            'end_time':'',
-            'execution_time_seconds':'',
-            'input_record_count':input_count,
-            'output_record_count':'',
-            'channels':input_channels,
-            'error_message':''
-        }])
+        logger.info(f'\tCampaign Started - Job ID:{self.job_id}')
+        logger.info(f'\tInput Records:{input_count}')
+        logger.info(f'\tChannels:{input_channels}')
+        logger.info(f'\tStart time:{self.start_time}')
         
-        entry.to_csv(self.audit_file, mode='a', index=False)
-        
-        logger.info(f'Campaign Started - Job ID:{self.job_id}')
-        logger.info(f'   Input Records:{input_count}')
-        logger.info(f'   Channels:{input_channels}')
-        logger.info(f'   Start time:{self.start_time}')
-        
+        try:
+            curr = conn.cursor()
+            
+            curr.execute("""
+                    INSERT INTO clm.campaign_audit_log
+                    (id,script_name,filename, status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message)
+                    VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s)
+                    """,
+                    (
+                    self.job_id,
+                    script_name,
+                    filename,
+                    'START',
+                    self.start_time,
+                    None,
+                    None,
+                    input_count,
+                    None,
+                    input_channels,
+                    None
+                    ))
+            logger.info('Insertion completed in the db table')
+            conn.commit()
+        except Exception as e:
+            logger.error(f"Inseriton Failed : {e}")
         
         return self.job_id
-    
-    
     
     
     
@@ -92,10 +78,10 @@ class CampaignAuditor:
             error_message=None
         )
         
-        logger.info(f"   Campaign Completed - Job ID: {self.job_id}")
-        logger.info(f"   Output Records: {output_count}")
-        logger.info(f"   Execution Time: {execution_time:.2f} seconds")
-        logger.info(f"   End Time: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        logger.info(f"\tCampaign Completed - Job ID: {self.job_id}")
+        logger.info(f"\tOutput Records: {output_count}")
+        logger.info(f"\tExecution Time: {execution_time:.2f} seconds")
+        logger.info(f"\tEnd Time: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
         
     def fail_campaign(self, error_message):
         """Log campaign failure"""
@@ -113,20 +99,44 @@ class CampaignAuditor:
             error_message=error_message
         )
         
+        logger.info(f"\tCampaign Failed - Job ID: {self.job_id}")
+        logger.info(f"\tOutput Records: {0}")
+        logger.info(f"\tExecution Time: {execution_time:.2f} seconds")
+        logger.info(f"\tEnd Time: {end_time.strftime('%Y-%m-%d %H:%M:%S')}")
+        
+        
+        
         
     def _update_audit_record(self, status, end_time, execution_time, 
                             output_count, error_message):
         """Update the audit record with final details"""
-        # Read entire audit file
-        audit_df = pd.read_csv(self.audit_file)
         
-        # Update the row for this job_id
-        mask = audit_df['id'] == self.job_id
-        audit_df.loc[mask, 'status'] = status
-        audit_df.loc[mask, 'end_time'] = end_time.strftime('%Y-%m-%d %H:%M:%S')
-        audit_df.loc[mask, 'execution_time_seconds'] = execution_time
-        audit_df.loc[mask, 'output_record_count'] = output_count
-        audit_df.loc[mask, 'error_message'] = error_message
-        
-        # Write back entire file
-        audit_df.to_csv(self.audit_file, index=False)
+        #Write to DB
+        try:
+            curr = conn.cursor()
+            
+            curr.execute("""
+                        UPDATE clm.campaign_audit_log
+                        SET
+                            status = %s,
+                            end_time = %s,
+                            execution_time_seconds = %s,
+                            output_record_count = %s,
+                            error_message = %s
+                        WHERE id = %s
+                    """,
+                    (
+                        status,
+                        end_time,
+                        execution_time,
+                        output_count,
+                        error_message,
+                        self.job_id
+                    )
+                )
+
+           
+            logger.info('   Log Closure Updated in the db table')
+            conn.commit()
+        except Exception as e:
+            logger.error(f"Inseriton Failed : {e}")

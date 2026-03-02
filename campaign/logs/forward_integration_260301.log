@@ -1,0 +1,32 @@
+INFO:__main__:
+
+Execution Started of forward integration at: 2026-03-01 12:58:50.153196 
+INFO:__main__:Module_no : 01
+INFO:__main__:Module_Name : Read_Export_DIR
+
+INFO:__main__:Total Number of CSV Files found: 1
+
+INFO:__main__:File read at index 0 : 
+ 
+INFO:export_process:Input file path : /Users/balkrishna/Documents/Projects/market_place_360/campaign/export/sms_1124.csv
+INFO:export_process:
+###---- Execution Started for Following File ----###
+ filename = sms_1124.csv
+ Channel = sms
+INFO:campaign_audit:	Campaign Started - Job ID:ba00fa3a-7819-4353-b5e2-fd688a212f33
+INFO:campaign_audit:	Input Records:1000
+INFO:campaign_audit:	Channels:sms
+INFO:campaign_audit:	Start time:2026-03-01 12:58:50.153619
+INFO:campaign_audit:Insertion completed in the db table
+INFO:export_process:file already shared for logging with job id ba00fa3a-7819-4353-b5e2-fd688a212f33
+INFO:export_process:Campaign file processing will start below
+INFO:export_process:sms_1124.csv
+INFO:modules.export_validator:Expected Columns : ['id', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email']
+INFO:modules.export_validator:Actual Columns   : ['id', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email']
+INFO:modules.export_validator:sms_format column validation PASSED
+INFO:campaign_audit:   Log Closure Updated in the db table
+INFO:campaign_audit:	Campaign Completed - Job ID: ba00fa3a-7819-4353-b5e2-fd688a212f33
+INFO:campaign_audit:	Output Records: 990
+INFO:campaign_audit:	Execution Time: 0.10 seconds
+INFO:campaign_audit:	End Time: 2026-03-01 12:58:50
+INFO:__main__:#------ End of Forward Integration Process ------#

@@ -79,3 +79,15 @@ id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_
 79e0aed6-2390-4590-bbb9-bbb0d8e173fa,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 19:45:40,2026-02-25 19:45:41,0.283365,1000,990,sms,
 id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
 14e81ece-6342-45c7-9bcf-9dc87d7ab1d6,forward_integration.py,sms_1124.csv,COMPLETE,2026-02-25 19:47:04,2026-02-25 19:47:04,0.095457,1000,990,sms,
+id,script_name,filename,status,start_time,end_time,execution_time_seconds,input_record_count,output_record_count,channels,error_message
+694c2273-6698-4e62-83e7-811681843bda,forward_integration.py,sms_1124.csv,failed,2026-03-01 12:25:05,2026-03-01 12:25:05,0.010972,1000,0,sms,0
+4c4b3fd1-d8c1-4bbd-a541-3001e8cb1a15,forward_integration.py,sms_1124.csv,failed,2026-03-01 12:26:17,2026-03-01 12:26:17,0.004431,1000,0,sms,0
+96cb04da-c427-4b38-8a68-a33124b49239,forward_integration.py,sms_1124.csv,COMPLETE,2026-03-01 12:31:59,2026-03-01 12:31:59,0.413673,1000,990,sms,
+8199de6d-dbb2-449d-9b12-a10463fc6eaa,forward_integration.py,sms_1124.csv,COMPLETE,2026-03-01 12:36:57,2026-03-01 12:36:57,0.099224,1000,990,sms,
+380762c3-475f-417a-b5d4-54b9a045606d,forward_integration.py,sms_1124.csv,COMPLETE,2026-03-01 12:39:57,2026-03-01 12:39:57,0.145117,1000,990,sms,
+31f95cc9-d8b9-4079-9bf3-43dd0c799791,forward_integration.py,sms_1124.csv,COMPLETE,2026-03-01 12:44:04,2026-03-01 12:44:04,0.119919,1000,990,sms,
+b7929f6a-8347-4110-8b6f-870d94897d4f,forward_integration.py,sms_1124.csv,COMPLETE,2026-03-01 12:45:39,2026-03-01 12:45:40,0.098077,1000,990,sms,
+2f936e0d-a88e-4f6b-bcb4-b7277c1a0ba2,forward_integration.py,sms_1124.csv,COMPLETE,2026-03-01 12:45:55,2026-03-01 12:45:55,0.100642,1000,990,sms,
+4168bd38-f129-4952-a7a5-664f2a1a523d,forward_integration.py,sms_1124.csv,COMPLETE,2026-03-01 12:46:01,2026-03-01 12:46:01,0.085507,1000,990,sms,
+89c4c317-1215-4c88-9dd7-d56efe9d8c74,forward_integration.py,sms_1124.csv,COMPLETE,2026-03-01 12:46:11,2026-03-01 12:46:11,0.093892,1000,990,sms,
+c1794570-3b80-4105-8b28-3a2641e18b6a,forward_integration.py,sms_1124.csv,COMPLETE,2026-03-01 12:46:22,2026-03-01 12:46:22,0.090826,1000,990,sms,

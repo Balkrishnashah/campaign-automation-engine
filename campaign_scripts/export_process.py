@@ -79,6 +79,9 @@ def export_process(export_filename, filenm_shortnm, channel):
                     auditor.fail_campaign(error_message="Export Validation Failed")
                     sys.exit(1)
                     
+                    
+                #seedlist and liverun module
+                    
                 
                 # attach communication id
                 '''
