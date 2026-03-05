@@ -19,7 +19,7 @@ admin_email = "balkrishna.11.shah@gmail.com"
 
 # log_file_nm = LOGS_DIR / "forward_integration.log"
 # log file with datetime
-log_file_nm = LOGS_DIR / f"forward_integration_{datetime.now():%y%m%d}.log"
+log_file_nm = LOGS_DIR / f"forward_integration.log" # Renamed the log file to this for every excution log ==> forward_integration_{datetime.now():%y%m%d}.log
 
 
    

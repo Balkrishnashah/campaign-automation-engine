@@ -37,8 +37,5 @@ for step, rule in enumerate(rules_list,start=1):
     apply_exclusion_rule(step,rule.strip())
 
 
-
-
-
 # DND | Global_OptOut | Blacklisted | Email_Optout
 
