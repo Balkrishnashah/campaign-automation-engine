@@ -1,7 +1,7 @@
 
 import pandas as pd
-from db_config import engine
-from campaign_config import seedlist_export_columns
+from config.db_config import engine
+from config.campaign_config import seedlist_export_columns
 import logging
 
 logger = logging.getLogger(__name__)

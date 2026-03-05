@@ -3,7 +3,7 @@ import shutil
 import os 
 from datetime import datetime
 
-from campaign_config import EXPORT_DIR,PROCESSED_DIR,FAILED_EXPORT_DIR,INPROGRESS_DIR
+from config.campaign_config import EXPORT_DIR,PROCESSED_DIR,FAILED_EXPORT_DIR,INPROGRESS_DIR
 
 import logging
 logger = logging.getLogger(__name__)

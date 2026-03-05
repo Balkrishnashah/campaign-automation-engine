@@ -2,7 +2,7 @@
 
 #Module wise import
 #Module1
-from campaign_config import EXPORT_DIR,LOGS_CREATE_FLAG,log_file_nm
+from config.campaign_config import EXPORT_DIR,LOGS_CREATE_FLAG,log_file_nm
 from export_process import export_process
 import logging
 from datetime import datetime

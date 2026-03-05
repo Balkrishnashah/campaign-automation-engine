@@ -1,14 +1,14 @@
 import pandas as pd
 from datetime import datetime
 import os
-from campaign_config import PARENT_DIR
+from config.campaign_config import PARENT_DIR
 from pathlib import Path
 
 import logging
 logger = logging.getLogger(__name__)
 
 import uuid
-from db_config import conn
+from config.db_config import conn
 
 
 class CampaignAuditor:

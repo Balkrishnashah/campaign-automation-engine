@@ -2,7 +2,7 @@ import smtplib
 from email.message import EmailMessage
 from datetime import datetime
 import logging
-from campaign_config import APP_PASSWORD
+from config.campaign_config import APP_PASSWORD
 
 logger = logging.getLogger(__name__)
 

@@ -1,11 +1,11 @@
 import sys
 
-from campaign_config import EXPORT_DIR,FAILED_EXPORT_DIR,PROCESSED_DIR,LOGS_DIR
+from config.campaign_config import EXPORT_DIR,FAILED_EXPORT_DIR,PROCESSED_DIR,LOGS_DIR
 import logging
 import os 
 
 from campaign_audit import *
-from campaign_config import EXPORT_DIR,EXPORT_FORMAT_FILE_PATH,admin_email
+from config.campaign_config import EXPORT_DIR,EXPORT_FORMAT_FILE_PATH,admin_email
 from camp_utils import *
 
 from modules.liverun import process_liverun
