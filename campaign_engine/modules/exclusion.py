@@ -1,6 +1,7 @@
 import pandas as pd
 from config.db_config  import engine,target_schema
 from datetime import datetime
+from sqlalchemy import text
 import logging
 logger = logging.getLogger(__name__)
 logger.info("######### Initiating Exclusion Engine ##############")
@@ -92,10 +93,9 @@ def apply_exclusion_rule(step, input_rule,current_valid_df, rules_map):
             excluded_rows['created_at'] = datetime.now()
         
             # if required then add below step to dorp the table manually
-            # with engine.begin() as conn:
-            #     conn.execute(f"""
-            #     DROP TABLE {target_schema}.{temp_exp_table_nm}
-            #     """)
+            with engine.begin() as conn:
+                query = f"DROP TABLE IF EXISTS {target_schema}.{temp_exp_table_nm}"
+                conn.execute(text(query))
             return valid_df, excluded_rows
             
         else:
