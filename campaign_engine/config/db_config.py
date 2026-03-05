@@ -9,6 +9,9 @@ USER = "balkrishna"
 PASSWORD = "postgressql@14"
 HOST = "localhost"
 
+source_schema = 'cdm'
+target_schema = 'clm'
+
 
 conn = psycopg2.connect(
     dbname=DBNAME,

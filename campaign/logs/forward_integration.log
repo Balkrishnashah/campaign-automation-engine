@@ -1,4 +1,80 @@
-DEBUG:__main__:This is Start of the Log file
-INFO:__main__:this is info type of line
-WARNING:__main__:And this, too
-ERROR:__main__:Error line 
+INFO:modules.exclusion:######### Initiating Exclusion Engine ##############
+INFO:modules.liverun:########## Liverun Module ##########
+INFO:modules.seedlist:########## Liverun Module ##########
+INFO:__main__:
+
+Execution Started of forward integration at: 2026-03-05 16:41:41.987411 
+INFO:__main__:Module_no : 01
+INFO:__main__:Module_Name : Read_Export_DIR
+
+INFO:__main__:Total Number of CSV Files found: 1
+
+INFO:__main__:File read at index 0 : 
+ 
+INFO:export_process:Input file path : /Users/balkrishna/Documents/Projects/market_place_360/campaign/export/email_2326.csv
+INFO:export_process:
+###---- Execution Started for Following File ----###
+ filename = email_2326.csv
+ Channel = email
+INFO:campaign_audit:	Campaign Started - Job ID:81ead7e3-9456-44c9-a78a-631b0df32c62
+INFO:campaign_audit:	Input Records:1000
+INFO:campaign_audit:	Channels:email
+INFO:campaign_audit:	Start time:2026-03-05 16:41:41.987672
+INFO:campaign_audit:Insertion completed in the db table
+INFO:export_process:file already shared for logging with job id 81ead7e3-9456-44c9-a78a-631b0df32c62
+INFO:export_process:Campaign file processing will start below
+INFO:export_process:email_2326.csv
+INFO:modules.export_validator:Expected Columns : ['customer_ref_no', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email', 'execution_type', 'template_id', 'campaign_id', 'segment_id', 'campaign_name', 'campaign_execution_count', 'product_pitched', 'campaign_type', 'channel', 'exclusion_rule']
+INFO:modules.export_validator:Actual Columns   : ['customer_ref_no', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email', 'execution_type', 'template_id', 'campaign_id', 'segment_id', 'campaign_name', 'campaign_execution_count', 'product_pitched', 'campaign_type', 'channel', 'exclusion_rule']
+INFO:modules.export_validator:email_format column validation PASSED
+INFO:export_process:Calling Liverun Module ... 
+DEBUG:modules.exclusion:  schema                      table       column             exclusion_rule exclusion_type exclusion_name
+0    cdm  customer_exclusion_master  reason_code        reason_code = 'DND'      MARKETING            DND
+1    cdm  customer_exclusion_master  reason_code     reason_code = 'OPTOUT'         GLOBAL  Global_OptOut
+2    cdm  customer_exclusion_master  reason_code  reason_code = 'BLACKLIST'         GLOBAL    Blacklisted
+3    cdm  customer_exclusion_master  reason_code   reason_code = 'NO_EMAIL'        CHANNEL   Email_Optout
+INFO:modules.exclusion:Exclusion  1 executed out of 4 : 
+INFO:modules.exclusion:Exclusion Executed for DND 
+DEBUG:modules.exclusion:Db Table pushed export_2026_03_05_16_41_42
+INFO:modules.exclusion:counts matched post applying exclusion filter for:  DND
+INFO:modules.exclusion:Current Rule exclusion rows 93 
+INFO:modules.exclusion:Current Rule valid rows     907 
+INFO:modules.exclusion:Toal  exclusion rows        93 
+INFO:modules.exclusion:Exclusion  2 executed out of 4 : 
+INFO:modules.exclusion:Exclusion Executed for Global_OptOut 
+DEBUG:modules.exclusion:Db Table pushed export_2026_03_05_16_41_42
+INFO:modules.exclusion:counts matched post applying exclusion filter for:  Global_OptOut
+INFO:modules.exclusion:Current Rule exclusion rows 23 
+INFO:modules.exclusion:Current Rule valid rows     884 
+INFO:modules.exclusion:Toal  exclusion rows        116 
+INFO:modules.exclusion:Exclusion  3 executed out of 4 : 
+INFO:modules.exclusion:Exclusion Executed for Blacklisted 
+DEBUG:modules.exclusion:Db Table pushed export_2026_03_05_16_41_42
+INFO:modules.exclusion:counts matched post applying exclusion filter for:  Blacklisted
+INFO:modules.exclusion:Current Rule exclusion rows 19 
+INFO:modules.exclusion:Current Rule valid rows     865 
+INFO:modules.exclusion:Toal  exclusion rows        135 
+INFO:modules.exclusion:Exclusion  4 executed out of 4 : 
+INFO:modules.exclusion:Exclusion Executed for Email_Optout 
+DEBUG:modules.exclusion:Db Table pushed export_2026_03_05_16_41_42
+INFO:modules.exclusion:counts matched post applying exclusion filter for:  Email_Optout
+INFO:modules.exclusion:Current Rule exclusion rows 144 
+INFO:modules.exclusion:Current Rule valid rows     721 
+INFO:modules.exclusion:Toal  exclusion rows        279 
+INFO:modules.liverun:Exclusion Executed completely 
+DEBUG:modules.liverun:Final Valid Record count : 721
+DEBUG:modules.liverun:Final Exclusion Record count : 279
+DEBUG:export_process:                        customer_ref_no first_name   last_name  ... campaign_type channel                                    exclusion_rule
+1  dcc1f144-443e-4d22-b94e-e142aed16ace     Donnie  MacCarrick  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout
+2  4d41ad91-7348-4b26-926e-89e69dfb6c5f      Urson       Thody  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout
+3  478d6bc1-d514-45c7-8989-d44e600e43f3      Burke    Bodechon  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout
+4  824d2844-298e-4e81-9771-f4142b575f37    Yolande       Szach  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout
+6  fad9451f-17c1-4afc-b654-f2fcb4db366d        Ada       Smeal  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout
+
+[5 rows x 18 columns]
+INFO:campaign_audit:   Log Closure Updated in the db table
+INFO:campaign_audit:	Campaign Completed - Job ID: 81ead7e3-9456-44c9-a78a-631b0df32c62
+INFO:campaign_audit:	Output Records: 990
+INFO:campaign_audit:	Execution Time: 0.29 seconds
+INFO:campaign_audit:	End Time: 2026-03-05 16:41:42
+INFO:__main__:#------ End of Forward Integration Process ------#

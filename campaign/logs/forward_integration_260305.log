@@ -1,0 +1,38 @@
+INFO:modules.liverun:########## Liverun Module ##########
+INFO:modules.seedlist:########## Liverun Module ##########
+INFO:__main__:
+
+Execution Started of forward integration at: 2026-03-05 12:21:30.906598 
+INFO:__main__:Module_no : 01
+INFO:__main__:Module_Name : Read_Export_DIR
+
+INFO:__main__:Total Number of CSV Files found: 1
+
+INFO:__main__:File read at index 0 : 
+ 
+INFO:export_process:Input file path : /Users/balkrishna/Documents/Projects/market_place_360/campaign/export/email_2326.csv
+INFO:export_process:
+###---- Execution Started for Following File ----###
+ filename = email_2326.csv
+ Channel = email
+INFO:campaign_audit:	Campaign Started - Job ID:d9d66211-06b9-4f3f-83dd-cd91a296e780
+INFO:campaign_audit:	Input Records:1000
+INFO:campaign_audit:	Channels:email
+INFO:campaign_audit:	Start time:2026-03-05 12:21:30.906873
+INFO:campaign_audit:Insertion completed in the db table
+INFO:export_process:file already shared for logging with job id d9d66211-06b9-4f3f-83dd-cd91a296e780
+INFO:export_process:Campaign file processing will start below
+INFO:export_process:email_2326.csv
+INFO:modules.export_validator:Expected Columns : ['customer_ref_no', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email', 'execution_type', 'template_id', 'campaign_id', 'segment_id', 'campaign_name', 'campaign_execution_count', 'product_pitched', 'campaign_type', 'channel', 'exclusion_rule']
+INFO:modules.export_validator:Actual Columns   : ['customer_ref_no', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email', 'execution_type', 'template_id', 'campaign_id', 'segment_id', 'campaign_name', 'campaign_execution_count', 'product_pitched', 'campaign_type', 'channel', 'exclusion_rule']
+INFO:modules.export_validator:email_format column validation PASSED
+INFO:export_process:Calling Liverun Module ... 
+DEBUG:export_process:Empty DataFrame
+Columns: []
+Index: []
+INFO:campaign_audit:   Log Closure Updated in the db table
+INFO:campaign_audit:	Campaign Completed - Job ID: d9d66211-06b9-4f3f-83dd-cd91a296e780
+INFO:campaign_audit:	Output Records: 990
+INFO:campaign_audit:	Execution Time: 0.14 seconds
+INFO:campaign_audit:	End Time: 2026-03-05 12:21:31
+INFO:__main__:#------ End of Forward Integration Process ------#
