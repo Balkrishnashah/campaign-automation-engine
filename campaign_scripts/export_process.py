@@ -8,9 +8,12 @@ from campaign_audit import *
 from campaign_config import EXPORT_DIR,EXPORT_FORMAT_FILE_PATH,admin_email
 from camp_utils import *
 
+from modules.liverun import process_liverun
+from modules.seedlist import process_seedlist
 from email_alert import send_alert
 from modules.export_validator import load_column_master,validate_columns
 
+import pandas as pd
 '''
 Module Added: 
 Campaign Audit: Log
@@ -34,6 +37,7 @@ def export_process(export_filename, filenm_shortnm, channel):
         #insert into campaign audit table with START
         auditor = CampaignAuditor()
         try:
+            #read the raw file
             raw_df = pd.read_csv(export_filename_path)
             input_count = len(raw_df)
                 
@@ -74,14 +78,34 @@ def export_process(export_filename, filenm_shortnm, channel):
                                         "Missing Columns: " + str(format_result["missing"]) + "<br>"
                                         "Extra Columns: " + str(format_result["extra"])
                                     )
-
+                    logger.error("Missing Columns: " + str(format_result["missing"]))
+                    logger.error("Extra Columns: " + str(format_result["extra"]))
                     send_alert("failure", analyst_email=admin_email, error=error_message)
                     auditor.fail_campaign(error_message="Export Validation Failed")
                     sys.exit(1)
                     
                     
                 #seedlist and liverun module
-                    
+                # extract execution_type from the input csv 
+                
+                execution_type = raw_df['execution_type'].iloc[0].lower()
+                
+                process_df = pd.DataFrame()
+                try : 
+                    if execution_type == 'seedlist':
+                        logger.info("Calling Seedlist Module ... ")
+                        process_df = process_seedlist(raw_df)
+                    else: 
+                        logger.info("Calling Liverun Module ... ")
+                        process_df = process_liverun(raw_df)
+                except Exception as e:
+                    raise(e)
+                    logger.error(f"Execution Type Error : {e}")        
+                
+                # log the final output dataset
+                logger.debug(process_df.head())
+                
+                
                 
                 # attach communication id
                 '''
@@ -89,7 +113,7 @@ def export_process(export_filename, filenm_shortnm, channel):
                 raw_df['communication_id'] = comm_gen.generateId(len(raw_df))
                 logger.info(f"\n {raw_df.head()}")
                 '''
-               
+                
                 
                 #Log file Failed
                 # auditor.fail_campaign(error_message='file not proper')
@@ -108,14 +132,13 @@ def export_process(export_filename, filenm_shortnm, channel):
                 auditor.complete_campaign(output_count=input_count-10)
                 
             else:
+                logger.error(e)
                 auditor.fail_campaign(error_message='File is corrupted')
                 # move_to_fail = move_to_failed(export_filename)
-                exit
         except Exception as e:
+            logger.info('failed at file reading')
+            logger.error(e)
             auditor.fail_campaign(error_message=str(e))
-            sys.exit(1)
-            
-        
         
         
     else:

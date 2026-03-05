@@ -49,6 +49,8 @@ def validate_columns(raw_df,schema_map,channel):
     else:
         logger.error(f"{format_col} column validation FAILED")
 
+    # logger.info(status, missing, extra, expected_cols, actual_cols)
+
     return {
         "status": status,
         "missing": missing,

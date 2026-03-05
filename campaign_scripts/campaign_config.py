@@ -37,10 +37,18 @@ log_file_nm = LOGS_DIR / f"forward_integration_{datetime.now():%y%m%d}.log"
 if LOGS_CREATE_FLAG.upper() == 'YES':
     handlers = [
         logging.FileHandler(log_file_nm, mode='w'),
-        logging.StreamHandler()
+        # Turning off the console log
+        # logging.StreamHandler()  
     ]
 else:
     handlers = [logging.StreamHandler()]
 
 logging.basicConfig(level=logging.DEBUG, handlers=handlers)
   
+# Additional Column list from the actual input file format which will be added in the seedlist file 
+
+  
+seedlist_export_columns = ['campaign_id','segment_id','execution_type',
+              'campaign_execution_count','template_id',
+              'product_pitched']
+
