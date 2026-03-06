@@ -4,7 +4,7 @@ from datetime import datetime
 from sqlalchemy import text
 import logging
 logger = logging.getLogger(__name__)
-logger.info("######### Initiating Exclusion Engine ##############")
+# logger.info("######### Initiating Exclusion Engine ##############")
 
 
 
@@ -55,7 +55,7 @@ def apply_exclusion_rule(step, input_rule,current_valid_df, rules_map):
             if_exists="replace",
             index=False,
             method="multi",
-            schema="clm"
+            schema=target_schema
         )
 
         #excute to perform exclusion : extract excluded customers.

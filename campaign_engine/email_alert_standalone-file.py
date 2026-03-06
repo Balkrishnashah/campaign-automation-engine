@@ -4,7 +4,7 @@ from datetime import datetime
 import logging
 from config.campaign_config import APP_PASSWORD
 
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__.upper())
 
 
 def send_email(subject, body, recipients,

@@ -26,7 +26,7 @@ move to Inprogress , Failed, Processed
 from communication_id_generator import CommunicationIDGenerator 
 
 # define logger for the logs from this module
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__.upper())
 
 def export_process(export_filename, filenm_shortnm, channel):
     export_filename_path = EXPORT_DIR / export_filename
@@ -97,13 +97,13 @@ def export_process(export_filename, filenm_shortnm, channel):
                         process_df = process_seedlist(raw_df)
                     else: 
                         logger.info("Calling Liverun Module ... ")
-                        process_df = process_liverun(raw_df, channel)
+                        process_df = process_liverun(raw_df, channel,auditor)
                 except Exception as e:
                     raise(e)
                     logger.error(f"Execution Type Error : {e}")        
                 
                 # log the final output dataset
-                logger.debug(process_df.head())
+                # logger.debug(process_df.head())
                 
                 
                 
@@ -128,8 +128,7 @@ def export_process(export_filename, filenm_shortnm, channel):
                 send_alert("failure", analyst_email=analyst_email, error="Error Message")
                 '''
                 
-                #Log file complete
-                auditor.complete_campaign(output_count=input_count-10)
+                
                 
             else:
                 logger.error(e)

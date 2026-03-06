@@ -6,7 +6,7 @@ from datetime import datetime
 from config.campaign_config import EXPORT_DIR,PROCESSED_DIR,FAILED_EXPORT_DIR,INPROGRESS_DIR
 
 import logging
-logger = logging.getLogger(__name__)
+logger = logging.getLogger(__name__.upper())
 
 # move files to inprogress
 def move_to_inprogress(input_filename):

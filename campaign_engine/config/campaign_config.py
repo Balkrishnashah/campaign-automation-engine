@@ -37,13 +37,15 @@ log_file_nm = LOGS_DIR / f"forward_integration.log" # Renamed the log file to th
 if LOGS_CREATE_FLAG.upper() == 'YES':
     handlers = [
         logging.FileHandler(log_file_nm, mode='w'),
-        # Turning off the console log
-        # logging.StreamHandler()  
+        # logging.StreamHandler()    # Turning off the console log
     ]
 else:
     handlers = [logging.StreamHandler()]
 
-logging.basicConfig(level=logging.DEBUG, handlers=handlers)
+logging.basicConfig(level=logging.DEBUG, 
+                    handlers=handlers,
+                    format="%(asctime)s - %(name)s - %(funcName)s() - %(levelname)s - %(message)s"
+                    )
   
 # Additional Column list from the actual input file format which will be added in the seedlist file 
 

@@ -8,8 +8,8 @@ import logging
 from datetime import datetime
 
 # start the logging
-logger = logging.getLogger(__name__)
-logger.info(f"\n\nExecution Started of forward integration at: {datetime.now()} ")
+logger = logging.getLogger(__name__.upper())
+logger.info(f"Execution Started of forward integration at: {datetime.now()} ")
 
 
 '''

@@ -6,7 +6,7 @@ import logging
 
 logger = logging.getLogger(__name__)
 
-logger.info("########## Liverun Module ##########")
+# logger.info("########## SEEDLIST Module ##########")
 def process_seedlist(input_df):
     # input_df = pd.read_csv("/Users/balkrishna/Documents/Projects/market_place_360/campaign/export/sms_2326.csv")
     # curr_df = input_df.copy()

@@ -1,13 +1,14 @@
 import logging
 import pandas as pd
 from modules.exclusion import execute_exclusion
+from modules.contact_policy import execute_contact_policy
 
 # initiate the module logger
-logger = logging.getLogger(__name__)
-logger.info("########## Liverun Module ##########")
+logger = logging.getLogger(__name__.upper())
+# logger.info("########## Liverun Module ##########")
 
 
-def process_liverun(input_df,input_channel):
+def process_liverun(input_df,input_channel, auditor):
     try: 
         liverun_df = pd.DataFrame()
         
@@ -39,8 +40,11 @@ def process_liverun(input_df,input_channel):
                 step8 : build contact policy update method for the these custmers
                 step9 : update channel counter and overall counter by reducing 1, and update datetime
                 '''
-                    
-                    
+                
+                cp_valid_df,cp_invalid_df = execute_contact_policy(liverun_df, input_channel)
+                
+                logger.info(f'contact policy completed, Valid count : {len(cp_valid_df)}  | Invalid count : {len(cp_invalid_df)} ')
+
                     
                 #Call Contact Matching Module
                     
@@ -72,6 +76,9 @@ def process_liverun(input_df,input_channel):
                         4. channel 
                         5. execution message
                 '''
+                
+                #Log file complete
+                auditor.complete_campaign(output_count=len(liverun_df))
 
         except Exception as e:
             raise(e)
