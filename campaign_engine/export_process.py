@@ -97,7 +97,7 @@ def export_process(export_filename, filenm_shortnm, channel):
                         process_df = process_seedlist(raw_df)
                     else: 
                         logger.info("Calling Liverun Module ... ")
-                        process_df = process_liverun(raw_df)
+                        process_df = process_liverun(raw_df, channel)
                 except Exception as e:
                     raise(e)
                     logger.error(f"Execution Type Error : {e}")        
