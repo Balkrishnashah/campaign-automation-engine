@@ -56,8 +56,8 @@ def process_liverun(input_df,input_channel, auditor):
                 step3 : store output in python.
                 
                 '''
-                cp_conmatch_df = execute_contact_matching(cp_valid_df, input_channel)
-                logger.info(f'contact Matching completed,  Before  count : {len(cp_valid_df)}, After count : {len(cp_conmatch_df)} ')
+                cp_conmatch_valid_df = execute_contact_matching(cp_valid_df, input_channel)
+                logger.info(f'contact Matching completed,  Before  count : {len(cp_valid_df)}, After count : {len(cp_conmatch_valid_df)} ')
 
 
                 
@@ -83,11 +83,11 @@ def process_liverun(input_df,input_channel, auditor):
                 '''
                 
                 
-                #Log file complete
-                auditor.complete_campaign(output_count=len(liverun_df))
+                # #Log file complete
+                # auditor.complete_campaign(output_count=len(liverun_df))
 
         except Exception as e:
-            raise(e)
+            auditor.fail_campaign(error_message='No Valid record count found')
             logger.error('No Valid record count found')
     except Exception as e:
         logger.error(e)
@@ -95,4 +95,4 @@ def process_liverun(input_df,input_channel, auditor):
     # Call the exclusion Module
     # step1 : extract exclusion list
     
-    return liverun_df
+    return cp_conmatch_valid_df

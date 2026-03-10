@@ -1,30 +1,30 @@
-2026-03-10 13:14:15,353 - __MAIN__ - <module>() - INFO - Execution Started of forward integration at: 2026-03-10 13:14:15.353469 
-2026-03-10 13:14:15,353 - __MAIN__ - <module>() - INFO - Module_no : 01
-2026-03-10 13:14:15,353 - __MAIN__ - <module>() - INFO - Module_Name : Read_Export_DIR
+2026-03-10 15:06:28,286 - __MAIN__ - <module>() - INFO - Execution Started of forward integration at: 2026-03-10 15:06:28.286401 
+2026-03-10 15:06:28,286 - __MAIN__ - <module>() - INFO - Module_no : 01
+2026-03-10 15:06:28,286 - __MAIN__ - <module>() - INFO - Module_Name : Read_Export_DIR
 
-2026-03-10 13:14:15,353 - __MAIN__ - <module>() - INFO - Total Number of CSV Files found: 1
+2026-03-10 15:06:28,286 - __MAIN__ - <module>() - INFO - Total Number of CSV Files found: 1
 
-2026-03-10 13:14:15,353 - __MAIN__ - <module>() - INFO - File read at index 0 : 
+2026-03-10 15:06:28,286 - __MAIN__ - <module>() - INFO - File read at index 0 : 
  
-2026-03-10 13:14:15,353 - EXPORT_PROCESS - export_process() - INFO - Input file path : /Users/balkrishna/Documents/Projects/market_place_360/campaign/export/email_2326.csv
-2026-03-10 13:14:15,353 - EXPORT_PROCESS - export_process() - INFO - 
+2026-03-10 15:06:28,286 - EXPORT_PROCESS - export_process() - INFO - Input file path : /Users/balkrishna/Documents/Projects/market_place_360/campaign/export/email_2326.csv
+2026-03-10 15:06:28,286 - EXPORT_PROCESS - export_process() - INFO - 
 ###---- Execution Started for Following File ----###
  filename = email_2326.csv
  Channel = email
-2026-03-10 13:14:15,361 - campaign_audit - start_campaign() - INFO - 	Campaign Started - Job ID:57c10804-0d8c-4154-88fe-a089bf159c12
-2026-03-10 13:14:15,361 - campaign_audit - start_campaign() - INFO - 	Input Records:1000
-2026-03-10 13:14:15,361 - campaign_audit - start_campaign() - INFO - 	Channels:email
-2026-03-10 13:14:15,361 - campaign_audit - start_campaign() - INFO - 	Start time:2026-03-10 13:14:15.353879
-2026-03-10 13:14:15,374 - campaign_audit - start_campaign() - INFO - Insertion completed in the db table
-2026-03-10 13:14:15,375 - EXPORT_PROCESS - export_process() - INFO - file already shared for logging with job id 57c10804-0d8c-4154-88fe-a089bf159c12
-2026-03-10 13:14:15,375 - EXPORT_PROCESS - export_process() - INFO - Campaign file processing will start below
-2026-03-10 13:14:15,375 - EXPORT_PROCESS - export_process() - INFO - email_2326.csv
-2026-03-10 13:14:15,465 - modules.export_validator - validate_columns() - INFO - Expected Columns : ['customer_ref_no', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email', 'execution_type', 'template_id', 'campaign_id', 'segment_id', 'campaign_name', 'campaign_execution_count', 'product_pitched', 'campaign_type', 'channel', 'exclusion_rule', 'contact_source']
-2026-03-10 13:14:15,466 - modules.export_validator - validate_columns() - INFO - Actual Columns   : ['customer_ref_no', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email', 'execution_type', 'template_id', 'campaign_id', 'segment_id', 'campaign_name', 'campaign_execution_count', 'product_pitched', 'campaign_type', 'channel', 'exclusion_rule', 'contact_source']
-2026-03-10 13:14:15,466 - modules.export_validator - validate_columns() - INFO - email_format column validation PASSED
-2026-03-10 13:14:15,466 - EXPORT_PROCESS - export_process() - INFO - Calling Liverun Module ... 
-2026-03-10 13:14:15,466 - MODULES.LIVERUN - process_liverun() - DEBUG - Input file
-2026-03-10 13:14:15,466 - MODULES.LIVERUN - process_liverun() - DEBUG -                         customer_ref_no first_name   last_name  ... channel                                    exclusion_rule contact_source
+2026-03-10 15:06:28,291 - campaign_audit - start_campaign() - INFO - 	Campaign Started - Job ID:c590d7b1-6d19-49ed-9180-ccce0447160a
+2026-03-10 15:06:28,291 - campaign_audit - start_campaign() - INFO - 	Input Records:1000
+2026-03-10 15:06:28,291 - campaign_audit - start_campaign() - INFO - 	Channels:email
+2026-03-10 15:06:28,291 - campaign_audit - start_campaign() - INFO - 	Start time:2026-03-10 15:06:28.286756
+2026-03-10 15:06:28,294 - campaign_audit - start_campaign() - INFO - Insertion completed in the db table
+2026-03-10 15:06:28,294 - EXPORT_PROCESS - export_process() - INFO - file already shared for logging with job id c590d7b1-6d19-49ed-9180-ccce0447160a
+2026-03-10 15:06:28,294 - EXPORT_PROCESS - export_process() - INFO - Campaign file processing will start below
+2026-03-10 15:06:28,294 - EXPORT_PROCESS - export_process() - INFO - email_2326.csv
+2026-03-10 15:06:28,379 - modules.export_validator - validate_columns() - INFO - Expected Columns : ['customer_ref_no', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email', 'execution_type', 'template_id', 'campaign_id', 'segment_id', 'campaign_name', 'campaign_execution_count', 'product_pitched', 'campaign_type', 'channel', 'exclusion_rule', 'contact_source']
+2026-03-10 15:06:28,379 - modules.export_validator - validate_columns() - INFO - Actual Columns   : ['customer_ref_no', 'first_name', 'last_name', 'email', 'gender', 'current_product', 'target_product', 'analyst_email', 'execution_type', 'template_id', 'campaign_id', 'segment_id', 'campaign_name', 'campaign_execution_count', 'product_pitched', 'campaign_type', 'channel', 'exclusion_rule', 'contact_source']
+2026-03-10 15:06:28,379 - modules.export_validator - validate_columns() - INFO - email_format column validation PASSED
+2026-03-10 15:06:28,379 - EXPORT_PROCESS - export_process() - INFO - Calling Liverun Module ... 
+2026-03-10 15:06:28,379 - MODULES.LIVERUN - process_liverun() - DEBUG - Input file
+2026-03-10 15:06:28,379 - MODULES.LIVERUN - process_liverun() - DEBUG -                         customer_ref_no first_name   last_name  ... channel                                    exclusion_rule contact_source
 0  e90f7344-0ce5-4a43-abb9-fd8d2cfbf014     Marlin   Kinneally  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 1  dcc1f144-443e-4d22-b94e-e142aed16ace     Donnie  MacCarrick  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 2  4d41ad91-7348-4b26-926e-89e69dfb6c5f      Urson       Thody  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
@@ -32,41 +32,41 @@
 4  824d2844-298e-4e81-9771-f4142b575f37    Yolande       Szach  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 
 [5 rows x 19 columns]
-2026-03-10 13:14:15,479 - modules.exclusion - execute_exclusion() - DEBUG -   schema                      table       column             exclusion_rule exclusion_type exclusion_name
+2026-03-10 15:06:28,390 - modules.exclusion - execute_exclusion() - DEBUG -   schema                      table       column             exclusion_rule exclusion_type exclusion_name
 0    cdm  customer_exclusion_master  reason_code        reason_code = 'DND'      MARKETING            DND
 1    cdm  customer_exclusion_master  reason_code     reason_code = 'OPTOUT'         GLOBAL  Global_OptOut
 2    cdm  customer_exclusion_master  reason_code  reason_code = 'BLACKLIST'         GLOBAL    Blacklisted
 3    cdm  customer_exclusion_master  reason_code   reason_code = 'NO_EMAIL'        CHANNEL   Email_Optout
-2026-03-10 13:14:15,481 - modules.exclusion - execute_exclusion() - INFO - Exclusion  1 executed out of 4 : 
-2026-03-10 13:14:15,481 - modules.exclusion - execute_exclusion() - INFO - Exclusion Executed for DND 
-2026-03-10 13:14:15,481 - modules.exclusion - apply_exclusion_rule() - DEBUG - Db Table pushed export_2026_03_10_13_14_15
-2026-03-10 13:14:15,527 - modules.exclusion - apply_exclusion_rule() - INFO - counts matched post applying exclusion filter for:  DND
-2026-03-10 13:14:15,534 - modules.exclusion - execute_exclusion() - INFO - Current Rule exclusion rows 93 
-2026-03-10 13:14:15,534 - modules.exclusion - execute_exclusion() - INFO - Current Rule valid rows     907 
-2026-03-10 13:14:15,534 - modules.exclusion - execute_exclusion() - INFO - Toal  exclusion rows        93 
-2026-03-10 13:14:15,534 - modules.exclusion - execute_exclusion() - INFO - Exclusion  2 executed out of 4 : 
-2026-03-10 13:14:15,534 - modules.exclusion - execute_exclusion() - INFO - Exclusion Executed for Global_OptOut 
-2026-03-10 13:14:15,534 - modules.exclusion - apply_exclusion_rule() - DEBUG - Db Table pushed export_2026_03_10_13_14_15
-2026-03-10 13:14:15,551 - modules.exclusion - apply_exclusion_rule() - INFO - counts matched post applying exclusion filter for:  Global_OptOut
-2026-03-10 13:14:15,555 - modules.exclusion - execute_exclusion() - INFO - Current Rule exclusion rows 23 
-2026-03-10 13:14:15,555 - modules.exclusion - execute_exclusion() - INFO - Current Rule valid rows     884 
-2026-03-10 13:14:15,555 - modules.exclusion - execute_exclusion() - INFO - Toal  exclusion rows        116 
-2026-03-10 13:14:15,555 - modules.exclusion - execute_exclusion() - INFO - Exclusion  3 executed out of 4 : 
-2026-03-10 13:14:15,555 - modules.exclusion - execute_exclusion() - INFO - Exclusion Executed for Blacklisted 
-2026-03-10 13:14:15,555 - modules.exclusion - apply_exclusion_rule() - DEBUG - Db Table pushed export_2026_03_10_13_14_15
-2026-03-10 13:14:15,575 - modules.exclusion - apply_exclusion_rule() - INFO - counts matched post applying exclusion filter for:  Blacklisted
-2026-03-10 13:14:15,577 - modules.exclusion - execute_exclusion() - INFO - Current Rule exclusion rows 19 
-2026-03-10 13:14:15,577 - modules.exclusion - execute_exclusion() - INFO - Current Rule valid rows     865 
-2026-03-10 13:14:15,577 - modules.exclusion - execute_exclusion() - INFO - Toal  exclusion rows        135 
-2026-03-10 13:14:15,577 - modules.exclusion - execute_exclusion() - INFO - Exclusion  4 executed out of 4 : 
-2026-03-10 13:14:15,577 - modules.exclusion - execute_exclusion() - INFO - Exclusion Executed for Email_Optout 
-2026-03-10 13:14:15,577 - modules.exclusion - apply_exclusion_rule() - DEBUG - Db Table pushed export_2026_03_10_13_14_15
-2026-03-10 13:14:15,596 - modules.exclusion - apply_exclusion_rule() - INFO - counts matched post applying exclusion filter for:  Email_Optout
-2026-03-10 13:14:15,598 - modules.exclusion - execute_exclusion() - INFO - Current Rule exclusion rows 144 
-2026-03-10 13:14:15,598 - modules.exclusion - execute_exclusion() - INFO - Current Rule valid rows     721 
-2026-03-10 13:14:15,598 - modules.exclusion - execute_exclusion() - INFO - Toal  exclusion rows        279 
-2026-03-10 13:14:15,599 - modules.exclusion - execute_exclusion() - DEBUG - count before merge : 721 , excl_start_df : 721
-2026-03-10 13:14:15,607 - modules.exclusion - execute_exclusion() - DEBUG - Merge Output : 
+2026-03-10 15:06:28,392 - modules.exclusion - execute_exclusion() - INFO - Exclusion  1 executed out of 4 : 
+2026-03-10 15:06:28,392 - modules.exclusion - execute_exclusion() - INFO - Exclusion Executed for DND 
+2026-03-10 15:06:28,392 - modules.exclusion - apply_exclusion_rule() - DEBUG - Db Table pushed export_2026_03_10_15_06_28
+2026-03-10 15:06:28,436 - modules.exclusion - apply_exclusion_rule() - INFO - counts matched post applying exclusion filter for:  DND
+2026-03-10 15:06:28,439 - modules.exclusion - execute_exclusion() - INFO - Current Rule exclusion rows 93 
+2026-03-10 15:06:28,439 - modules.exclusion - execute_exclusion() - INFO - Current Rule valid rows     907 
+2026-03-10 15:06:28,439 - modules.exclusion - execute_exclusion() - INFO - Toal  exclusion rows        93 
+2026-03-10 15:06:28,439 - modules.exclusion - execute_exclusion() - INFO - Exclusion  2 executed out of 4 : 
+2026-03-10 15:06:28,439 - modules.exclusion - execute_exclusion() - INFO - Exclusion Executed for Global_OptOut 
+2026-03-10 15:06:28,439 - modules.exclusion - apply_exclusion_rule() - DEBUG - Db Table pushed export_2026_03_10_15_06_28
+2026-03-10 15:06:28,455 - modules.exclusion - apply_exclusion_rule() - INFO - counts matched post applying exclusion filter for:  Global_OptOut
+2026-03-10 15:06:28,458 - modules.exclusion - execute_exclusion() - INFO - Current Rule exclusion rows 23 
+2026-03-10 15:06:28,458 - modules.exclusion - execute_exclusion() - INFO - Current Rule valid rows     884 
+2026-03-10 15:06:28,458 - modules.exclusion - execute_exclusion() - INFO - Toal  exclusion rows        116 
+2026-03-10 15:06:28,458 - modules.exclusion - execute_exclusion() - INFO - Exclusion  3 executed out of 4 : 
+2026-03-10 15:06:28,458 - modules.exclusion - execute_exclusion() - INFO - Exclusion Executed for Blacklisted 
+2026-03-10 15:06:28,458 - modules.exclusion - apply_exclusion_rule() - DEBUG - Db Table pushed export_2026_03_10_15_06_28
+2026-03-10 15:06:28,474 - modules.exclusion - apply_exclusion_rule() - INFO - counts matched post applying exclusion filter for:  Blacklisted
+2026-03-10 15:06:28,477 - modules.exclusion - execute_exclusion() - INFO - Current Rule exclusion rows 19 
+2026-03-10 15:06:28,477 - modules.exclusion - execute_exclusion() - INFO - Current Rule valid rows     865 
+2026-03-10 15:06:28,477 - modules.exclusion - execute_exclusion() - INFO - Toal  exclusion rows        135 
+2026-03-10 15:06:28,477 - modules.exclusion - execute_exclusion() - INFO - Exclusion  4 executed out of 4 : 
+2026-03-10 15:06:28,477 - modules.exclusion - execute_exclusion() - INFO - Exclusion Executed for Email_Optout 
+2026-03-10 15:06:28,477 - modules.exclusion - apply_exclusion_rule() - DEBUG - Db Table pushed export_2026_03_10_15_06_28
+2026-03-10 15:06:28,497 - modules.exclusion - apply_exclusion_rule() - INFO - counts matched post applying exclusion filter for:  Email_Optout
+2026-03-10 15:06:28,500 - modules.exclusion - execute_exclusion() - INFO - Current Rule exclusion rows 144 
+2026-03-10 15:06:28,500 - modules.exclusion - execute_exclusion() - INFO - Current Rule valid rows     721 
+2026-03-10 15:06:28,500 - modules.exclusion - execute_exclusion() - INFO - Toal  exclusion rows        279 
+2026-03-10 15:06:28,500 - modules.exclusion - execute_exclusion() - DEBUG - count before merge : 721 , excl_start_df : 721
+2026-03-10 15:06:28,507 - modules.exclusion - execute_exclusion() - DEBUG - Merge Output : 
                         customer_ref_no first_name   last_name  ... channel                                    exclusion_rule contact_source
 0  dcc1f144-443e-4d22-b94e-e142aed16ace     Donnie  MacCarrick  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 1  4d41ad91-7348-4b26-926e-89e69dfb6c5f      Urson       Thody  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
@@ -75,35 +75,35 @@
 4  fad9451f-17c1-4afc-b654-f2fcb4db366d        Ada       Smeal  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 
 [5 rows x 19 columns]
-2026-03-10 13:14:15,607 - modules.exclusion - execute_exclusion() - DEBUG - count after merge : 721
-2026-03-10 13:14:15,607 - modules.exclusion - execute_exclusion() - DEBUG - count of columns  : 19
-2026-03-10 13:14:15,607 - MODULES.LIVERUN - process_liverun() - INFO - Exclusion Executed completely 
-2026-03-10 13:14:15,607 - MODULES.LIVERUN - process_liverun() - DEBUG - Final Valid Record count : 721
-2026-03-10 13:14:15,607 - MODULES.LIVERUN - process_liverun() - DEBUG - Final Exclusion Record count : 279
-2026-03-10 13:14:15,607 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - Inside Contact Policy Method
-2026-03-10 13:14:15,607 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - extracting contact policy col name : email_cap
-2026-03-10 13:14:15,607 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - Db Table pushed contact_2026_03_10
-2026-03-10 13:14:15,628 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - Output of the contact policy join :                         customer_ref_no  email_cap  max_cap
+2026-03-10 15:06:28,507 - modules.exclusion - execute_exclusion() - DEBUG - count after merge : 721
+2026-03-10 15:06:28,507 - modules.exclusion - execute_exclusion() - DEBUG - count of columns  : 19
+2026-03-10 15:06:28,507 - MODULES.LIVERUN - process_liverun() - INFO - Exclusion Executed completely 
+2026-03-10 15:06:28,507 - MODULES.LIVERUN - process_liverun() - DEBUG - Final Valid Record count : 721
+2026-03-10 15:06:28,507 - MODULES.LIVERUN - process_liverun() - DEBUG - Final Exclusion Record count : 279
+2026-03-10 15:06:28,507 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - Inside Contact Policy Method
+2026-03-10 15:06:28,507 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - extracting contact policy col name : email_cap
+2026-03-10 15:06:28,507 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - Db Table pushed contact_2026_03_10
+2026-03-10 15:06:28,527 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - Output of the contact policy join :                         customer_ref_no  email_cap  max_cap
 0  dcc1f144-443e-4d22-b94e-e142aed16ace          0        7
 1  4d41ad91-7348-4b26-926e-89e69dfb6c5f          0       13
 2  478d6bc1-d514-45c7-8989-d44e600e43f3          0        6
 3  824d2844-298e-4e81-9771-f4142b575f37          0       15
 4  fad9451f-17c1-4afc-b654-f2fcb4db366d          0       10
-2026-03-10 13:14:15,629 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - before eligible
-2026-03-10 13:14:15,629 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG -                         customer_ref_no  email_cap  max_cap CP_flag
+2026-03-10 15:06:28,528 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - before eligible
+2026-03-10 15:06:28,528 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG -                         customer_ref_no  email_cap  max_cap CP_flag
 0  dcc1f144-443e-4d22-b94e-e142aed16ace          0        7      CC
 1  4d41ad91-7348-4b26-926e-89e69dfb6c5f          0       13      CC
 2  478d6bc1-d514-45c7-8989-d44e600e43f3          0        6      CC
 3  824d2844-298e-4e81-9771-f4142b575f37          0       15      CC
 4  fad9451f-17c1-4afc-b654-f2fcb4db366d          0       10      CC
-2026-03-10 13:14:15,630 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - 721
-2026-03-10 13:14:15,630 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - Total Contact Policy Records :          721
-2026-03-10 13:14:15,630 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - Total Eligible Contact Policy Records : 568
-2026-03-10 13:14:15,630 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - Total Ineligible Contact Policy Records : 153
-2026-03-10 13:14:15,630 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO -  721 == (568 + 153 )
-2026-03-10 13:14:15,630 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - count matched
-2026-03-10 13:14:15,630 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - count before merge : 568
-2026-03-10 13:14:15,636 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - Merge Output : 
+2026-03-10 15:06:28,529 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - 721
+2026-03-10 15:06:28,529 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - Total Contact Policy Records :          721
+2026-03-10 15:06:28,529 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - Total Eligible Contact Policy Records : 568
+2026-03-10 15:06:28,529 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - Total Ineligible Contact Policy Records : 153
+2026-03-10 15:06:28,529 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO -  721 == (568 + 153 )
+2026-03-10 15:06:28,529 - MODULES.CONTACT_POLICY - execute_contact_policy() - INFO - count matched
+2026-03-10 15:06:28,529 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - count before merge : 568
+2026-03-10 15:06:28,534 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - Merge Output : 
                         customer_ref_no   CP_flag first_name  last_name  ... campaign_type channel                                    exclusion_rule contact_source
 0  0b33725c-9165-4892-b671-55ab9169c5ec  ELIGIBLE     Weston  Johananov  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 1  220f7fb4-e4ec-425e-8b32-6f0511af7c5a  ELIGIBLE     Verena  Alennikov  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
@@ -112,10 +112,10 @@
 4  ed725754-1c64-4a3f-81db-35fe8a48480d  ELIGIBLE     Jolynn    Guiraud  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 
 [5 rows x 20 columns]
-2026-03-10 13:14:15,636 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - count after merge : 568
-2026-03-10 13:14:15,636 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - count of columns  : 20
-2026-03-10 13:14:15,639 - MODULES.LIVERUN - process_liverun() - INFO - contact policy completed, Valid count : 568  | Invalid count : 153 
-2026-03-10 13:14:15,643 - modules.contact_matching - execute_contact_matching() - DEBUG - current valid df :                         customer_ref_no   CP_flag first_name  last_name  ... campaign_type channel                                    exclusion_rule contact_source
+2026-03-10 15:06:28,534 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - count after merge : 568
+2026-03-10 15:06:28,534 - MODULES.CONTACT_POLICY - execute_contact_policy() - DEBUG - count of columns  : 20
+2026-03-10 15:06:28,536 - MODULES.LIVERUN - process_liverun() - INFO - contact policy completed, Valid count : 568  | Invalid count : 153 
+2026-03-10 15:06:28,540 - modules.contact_matching - execute_contact_matching() - DEBUG - current valid df :                         customer_ref_no   CP_flag first_name  last_name  ... campaign_type channel                                    exclusion_rule contact_source
 0  0b33725c-9165-4892-b671-55ab9169c5ec  ELIGIBLE     Weston  Johananov  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 1  220f7fb4-e4ec-425e-8b32-6f0511af7c5a  ELIGIBLE     Verena  Alennikov  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 2  0327133b-743e-4911-b5a1-7303effaf821  ELIGIBLE      Bordy    Kiossel  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
@@ -123,11 +123,11 @@
 4  ed725754-1c64-4a3f-81db-35fe8a48480d  ELIGIBLE     Jolynn    Guiraud  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 
 [5 rows x 20 columns]
-2026-03-10 13:14:15,643 - modules.contact_matching - execute_contact_matching() - INFO - initating contact matching 
-2026-03-10 13:14:15,643 - modules.contact_matching - execute_contact_matching() - INFO - extracting column. email
-2026-03-10 13:14:15,643 - modules.contact_matching - execute_contact_matching() - DEBUG - count of temp con table df 568
-2026-03-10 13:14:15,694 - modules.contact_matching - execute_contact_matching() - DEBUG - Db Table pushed conmatch_2026_03_10
-2026-03-10 13:14:15,694 - modules.contact_matching - execute_contact_matching() - DEBUG -                         customer_ref_no   CP_flag first_name  last_name  ... campaign_type channel                                    exclusion_rule contact_source
+2026-03-10 15:06:28,540 - modules.contact_matching - execute_contact_matching() - INFO - initating contact matching 
+2026-03-10 15:06:28,540 - modules.contact_matching - execute_contact_matching() - INFO - extracting column. email
+2026-03-10 15:06:28,540 - modules.contact_matching - execute_contact_matching() - DEBUG - count of temp con table df 568
+2026-03-10 15:06:28,598 - modules.contact_matching - execute_contact_matching() - DEBUG - Db Table pushed conmatch_2026_03_10
+2026-03-10 15:06:28,598 - modules.contact_matching - execute_contact_matching() - DEBUG -                         customer_ref_no   CP_flag first_name  last_name  ... campaign_type channel                                    exclusion_rule contact_source
 0  0b33725c-9165-4892-b671-55ab9169c5ec  ELIGIBLE     Weston  Johananov  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 1  220f7fb4-e4ec-425e-8b32-6f0511af7c5a  ELIGIBLE     Verena  Alennikov  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 2  0327133b-743e-4911-b5a1-7303effaf821  ELIGIBLE      Bordy    Kiossel  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
@@ -135,15 +135,15 @@
 4  ed725754-1c64-4a3f-81db-35fe8a48480d  ELIGIBLE     Jolynn    Guiraud  ...        Retail   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 
 [5 rows x 20 columns]
-2026-03-10 13:14:15,698 - modules.contact_matching - execute_contact_matching() - DEBUG - Current contact source. : CreditCard
-2026-03-10 13:14:15,704 - modules.contact_matching - execute_contact_matching() - DEBUG -                         customer_ref_no                       email
+2026-03-10 15:06:28,603 - modules.contact_matching - execute_contact_matching() - DEBUG - Current contact source. : CreditCard
+2026-03-10 15:06:28,607 - modules.contact_matching - execute_contact_matching() - DEBUG - count before merge : 568, Input file :  568
+2026-03-10 15:06:28,607 - modules.contact_matching - execute_contact_matching() - DEBUG -                         customer_ref_no                       email
 0  0b33725c-9165-4892-b671-55ab9169c5ec  staffordbianca@example.org
 1  220f7fb4-e4ec-425e-8b32-6f0511af7c5a         zcastro@example.org
 2  0327133b-743e-4911-b5a1-7303effaf821     jessicahowe@example.org
 3  34df6341-a4e2-41fe-b4d1-3505684b2fd4     ramosarthur@example.com
 4  ed725754-1c64-4a3f-81db-35fe8a48480d   caitlinnguyen@example.com
-2026-03-10 13:14:15,704 - modules.contact_matching - execute_contact_matching() - DEBUG - count before merge : 568,Input file :  568
-2026-03-10 13:14:15,709 - modules.contact_matching - execute_contact_matching() - DEBUG - Merge Output : 
+2026-03-10 15:06:28,613 - modules.contact_matching - execute_contact_matching() - DEBUG - Merge Output : 
                         customer_ref_no                       email   CP_flag  ... channel                                    exclusion_rule contact_source
 0  0b33725c-9165-4892-b671-55ab9169c5ec  staffordbianca@example.org  ELIGIBLE  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 1  220f7fb4-e4ec-425e-8b32-6f0511af7c5a         zcastro@example.org  ELIGIBLE  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
@@ -152,12 +152,22 @@
 4  ed725754-1c64-4a3f-81db-35fe8a48480d   caitlinnguyen@example.com  ELIGIBLE  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
 
 [5 rows x 20 columns]
-2026-03-10 13:14:15,709 - modules.contact_matching - execute_contact_matching() - DEBUG - count after merge : 568
-2026-03-10 13:14:15,709 - modules.contact_matching - execute_contact_matching() - DEBUG - count of columns  : 20
-2026-03-10 13:14:15,709 - MODULES.LIVERUN - process_liverun() - INFO - contact Matching completed,  Before  count : 568, After count : 568 
-2026-03-10 13:14:15,712 - campaign_audit - _update_audit_record() - INFO -    Log Closure Updated in the db table
-2026-03-10 13:14:15,712 - campaign_audit - complete_campaign() - INFO - 	Campaign Completed - Job ID: 57c10804-0d8c-4154-88fe-a089bf159c12
-2026-03-10 13:14:15,712 - campaign_audit - complete_campaign() - INFO - 	Output Records: 721
-2026-03-10 13:14:15,712 - campaign_audit - complete_campaign() - INFO - 	Execution Time: 0.36 seconds
-2026-03-10 13:14:15,712 - campaign_audit - complete_campaign() - INFO - 	End Time: 2026-03-10 13:14:15
-2026-03-10 13:14:15,713 - __MAIN__ - <module>() - INFO - #------ End of Forward Integration Process ------#
+2026-03-10 15:06:28,613 - modules.contact_matching - execute_contact_matching() - DEBUG - count after merge : 568
+2026-03-10 15:06:28,613 - modules.contact_matching - execute_contact_matching() - DEBUG - count of columns  : 20
+2026-03-10 15:06:28,613 - MODULES.LIVERUN - process_liverun() - INFO - contact Matching completed,  Before  count : 568, After count : 568 
+2026-03-10 15:06:28,615 - campaign_audit - _update_audit_record() - INFO -    Log Closure Updated in the db table
+2026-03-10 15:06:28,615 - campaign_audit - complete_campaign() - INFO - 	Campaign Completed - Job ID: c590d7b1-6d19-49ed-9180-ccce0447160a
+2026-03-10 15:06:28,615 - campaign_audit - complete_campaign() - INFO - 	Output Records: 721
+2026-03-10 15:06:28,615 - campaign_audit - complete_campaign() - INFO - 	Execution Time: 0.33 seconds
+2026-03-10 15:06:28,615 - campaign_audit - complete_campaign() - INFO - 	End Time: 2026-03-10 15:06:28
+2026-03-10 15:06:28,616 - EXPORT_PROCESS - export_process() - DEBUG - ### Final Live run data received ####
+2026-03-10 15:06:28,616 - EXPORT_PROCESS - export_process() - DEBUG - Count of total records : 721 Out of 1000
+2026-03-10 15:06:28,616 - EXPORT_PROCESS - export_process() - DEBUG -                         customer_ref_no first_name   last_name  ... channel                                    exclusion_rule contact_source
+0  dcc1f144-443e-4d22-b94e-e142aed16ace     Donnie  MacCarrick  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
+1  4d41ad91-7348-4b26-926e-89e69dfb6c5f      Urson       Thody  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
+2  478d6bc1-d514-45c7-8989-d44e600e43f3      Burke    Bodechon  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
+3  824d2844-298e-4e81-9771-f4142b575f37    Yolande       Szach  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
+4  fad9451f-17c1-4afc-b654-f2fcb4db366d        Ada       Smeal  ...   EMAIL  DND | Global_OptOut | Blacklisted | Email_Optout     CreditCard
+
+[5 rows x 19 columns]
+2026-03-10 15:06:28,619 - __MAIN__ - <module>() - INFO - #------ End of Forward Integration Process ------#

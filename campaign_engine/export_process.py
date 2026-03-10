@@ -103,7 +103,10 @@ def export_process(export_filename, filenm_shortnm, channel):
                     logger.error(f"Execution Type Error : {e}")        
                 
                 # log the final output dataset
-                # logger.debug(process_df.head())
+                logger.debug('### Final Live run data received ####')
+                logger.debug(f'Count of total records : {len(process_df)} Out of {len(raw_df)}')
+                logger.debug(process_df.head())
+                
                 
                 
                 
@@ -124,13 +127,12 @@ def export_process(export_filename, filenm_shortnm, channel):
                 # move_to_success = move_to_processed(export_filename)
                 
                 # send email module
+                
                 '''
                 analyst_email = "balkrishna.11.shah@gmail.com"
                 send_alert("success", analyst_email=analyst_email)
                 send_alert("failure", analyst_email=analyst_email, error="Error Message")
                 '''
-                
-                
                 
             else:
                 logger.error(e)

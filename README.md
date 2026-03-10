@@ -25,7 +25,7 @@ Current target channels:
 
 ## Implemented Modules
 
-### Data Ingestion Module
+### 1) Data Ingestion Module
 - File reader and CSV dispatcher (`main.py`)
 - Export processing orchestrator (`export_process.py`)
 - File movement utilities (`camp_utils.py`)
@@ -38,12 +38,12 @@ Current target channels:
   - success/failure alerts
 - Export column format validator (`modules/export_validator.py`)
 
-### 1) Seedlist and Live Run Check
+### 2) Seedlist and Live Run Check
 - Seedlist and liverun check
 - Seedlist module
 - Liverun module
 
-### 2) Exclusion Module
+### 3) Exclusion Module
 - Global exclusion
 - Marketing exclusion
 - Marketing opt-out exclusion
@@ -51,14 +51,13 @@ Current target channels:
 - Loan exclusion
 - Channel exclusion
 
-### 3) Contact & Policy Modules
-- Contact matching module
+### 4) Contact & Policy Modules
 - Contact policy module
-- 
+- Contact matching module
 
 ## Upcoming Modules
 
-### 1) Channel Check and Delivery
+### 5) Channel Check and Delivery
 - Channel module split by channel (Email and SMS)
 - Communication ID logic
 - Build API for sending campaign via email

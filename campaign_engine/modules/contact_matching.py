@@ -71,16 +71,16 @@ def execute_contact_matching(input_df, input_channel):
             logger.error(f"Contact matching : {e}")
         
         if len(valid_df) == len(input_df):
-            logger.debug(f'count before merge : {len(valid_df)},Input file :  {len(input_df)}')
+            logger.debug(f'count before merge : {len(valid_df)}, Input file :  {len(input_df)}')
         
-        logger.debug(valid_df.head())
-        valid_df = valid_df.merge(input_df.drop(columns=['email']), on="customer_ref_no",how='inner')
-        # valid_df = valid_df.reset_index(drop=True)
-        logger.debug(f'Merge Output : \n{valid_df.head()}')
-        
-        print(valid_df["customer_ref_no"].str.strip().isin(input_df["customer_ref_no"].str.strip()).sum())
-        logger.debug(f'count after merge : {len(valid_df)}')
-        logger.debug(f'count of columns  : {valid_df.shape[1]}')
+            logger.debug(valid_df.head())
+            valid_df = valid_df.merge(input_df.drop(columns=['email']), on="customer_ref_no",how='inner')
+            # valid_df = valid_df.reset_index(drop=True)
+            logger.debug(f'Merge Output : \n{valid_df.head()}')
+            logger.debug(f'count after merge : {len(valid_df)}')
+            logger.debug(f'count of columns  : {valid_df.shape[1]}')
+            
+            return valid_df
     except Exception as e :
         logger.debug(f'error {e}')
         
