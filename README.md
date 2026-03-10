@@ -1,12 +1,23 @@
 # Campaign File Processing Engine
 
-A Python-based campaign processing engine for ingesting campaign CSV files, validating structure, tracking execution, moving files across process states, and sending operational alerts.
+A configurable marketing campaign execution framework for customer targeting pipelines. It ingests campaign files, validates structure, applies rule-driven segmentation and exclusion logic, enforces contact policy capping, and tracks execution with audit and logging pipelines.
 
 ## Overview
 
-The engine monitors the export folder, picks upcoming CSV files, verifies filename/channel context, and sends each file to the processing pipeline.
+Designed to resemble enterprise marketing platforms with modular, rule-based processing. It supports SQL-based customer extraction inputs, configurable campaign rules, and orchestration across multiple pipeline stages.
 
-Current target channels:
+
+## Core Capabilities
+
+- Config-driven campaign execution
+- Exclusion logic 
+- Contact policy capping 
+- Contact source matching
+- Seedlist or Liverun Based campaing execution
+- Structured logging and audit trails across pipeline stages
+
+
+## Channels
 - Email
 - SMS
 
