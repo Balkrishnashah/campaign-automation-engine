@@ -96,45 +96,55 @@ def execute_contact_policy(input_df, input_channel_nm):
     
     try:
         # execute db query 
-        con_stage1_df = pd.read_sql(query,engine)
+        valid_df = pd.read_sql(query,engine)
     except Exception as e:
         logger.error(f"contact policy DB insertion failed : {e}")
     
-    logger.debug(con_stage1_df.head())
+    
+    logger.debug(f'Output of the contact policy join : {valid_df.head()}')
     
     # calcualte contact policy flag 
-    con_stage1_df['CP_flag'] = np.select(
-        [ con_stage1_df[f'{contact_policy_cols}'] <=0, con_stage1_df['max_cap'] <=0 ],
+    valid_df['CP_flag'] = np.select(
+        [ valid_df[f'{contact_policy_cols}'] <=0, valid_df['max_cap'] <=0 ],
         ['CC','CO'],
         default='ELIGIBLE'
     )
     
     # extract customer who failed contact policy rules
-    con_stage2_df = con_stage1_df[
-        con_stage1_df['CP_flag'] != 'ELIGIBLE'
+    invalid_df = valid_df[
+        valid_df['CP_flag'] != 'ELIGIBLE'
     ]
     logger.info('before eligible')
-    logger.debug(con_stage1_df.head())
-    logger.debug(len(con_stage1_df))
+    logger.debug(valid_df.head())
+    logger.debug(len(valid_df))
     
     
-    logger.info(f'Total Contact Policy Records :          {len(con_stage1_df)}')
+    logger.info(f'Total Contact Policy Records :          {len(valid_df)}')
     
     # remove invalid customers from valid list
-    con_stage1_df = con_stage1_df[
-    ~con_stage1_df['customer_ref_no'].isin(con_stage2_df['customer_ref_no'])
+    valid_df = valid_df[
+    ~valid_df['customer_ref_no'].isin(invalid_df['customer_ref_no'])
         ]
     
-    logger.info(f'Total Eligible Contact Policy Records : {len(con_stage1_df)}')
-    logger.info(f'Total Ineligible Contact Policy Records : {len(con_stage2_df)}')
+    logger.info(f'Total Eligible Contact Policy Records : {len(valid_df)}')
+    logger.info(f'Total Ineligible Contact Policy Records : {len(invalid_df)}')
     
-    logger.info(f" {len(current_valid_df)} == ({len(con_stage1_df) } + {len(con_stage2_df)} )")
-    if len(current_valid_df) == (len(con_stage1_df) + len(con_stage2_df) ):
+    logger.info(f" {len(current_valid_df)} == ({len(valid_df) } + {len(invalid_df)} )")
+    if len(current_valid_df) == (len(valid_df) + len(invalid_df) ):
         logger.info('count matched')
+        logger.debug(f'count before merge : {len(valid_df)}')
+        valid_df = valid_df.merge(current_valid_df, how='left')
+        valid_df = valid_df.drop(columns=['email_cap', 'max_cap'] , axis=1)
+        logger.debug(f'Merge Output : \n{valid_df.head()}')
+        logger.debug(f'count after merge : {len(valid_df)}')
+        logger.debug(f'count of columns  : {valid_df.shape[1]}')
+       
+        
+        
         with engine.begin() as conn:
                 query = f"DROP TABLE IF EXISTS {target_schema}.{temp_con_table_nm}"
                 conn.execute(text(query))
     
     
     
-    return con_stage1_df, con_stage2_df
+    return valid_df, invalid_df

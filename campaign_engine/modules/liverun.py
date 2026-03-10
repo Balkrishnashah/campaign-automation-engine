@@ -2,6 +2,7 @@ import logging
 import pandas as pd
 from modules.exclusion import execute_exclusion
 from modules.contact_policy import execute_contact_policy
+from modules.contact_matching import execute_contact_matching
 
 # initiate the module logger
 logger = logging.getLogger(__name__.upper())
@@ -11,7 +12,8 @@ logger = logging.getLogger(__name__.upper())
 def process_liverun(input_df,input_channel, auditor):
     try: 
         liverun_df = pd.DataFrame()
-        
+        logger.debug('Input file')
+        logger.debug(input_df.head())
         # Call exclusion process 
         liverun_df,total_exclusion_records = execute_exclusion(input_df)
         
@@ -54,6 +56,9 @@ def process_liverun(input_df,input_channel, auditor):
                 step3 : store output in python.
                 
                 '''
+                cp_conmatch_df = execute_contact_matching(cp_valid_df, input_channel)
+                logger.info(f'contact Matching completed,  Before  count : {len(cp_valid_df)}, After count : {len(cp_conmatch_df)} ')
+
 
                 
                 # Call Channel module to execute campaign
@@ -76,6 +81,7 @@ def process_liverun(input_df,input_channel, auditor):
                         4. channel 
                         5. execution message
                 '''
+                
                 
                 #Log file complete
                 auditor.complete_campaign(output_count=len(liverun_df))

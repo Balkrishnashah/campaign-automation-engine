@@ -115,6 +115,8 @@ def export_process(export_filename, filenm_shortnm, channel):
                 '''
                 
                 
+                
+                
                 #Log file Failed
                 # auditor.fail_campaign(error_message='file not proper')
                 

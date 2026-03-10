@@ -91,6 +91,8 @@ def apply_exclusion_rule(step, input_rule,current_valid_df, rules_map):
             excluded_rows['exclusion_name'] = input_rule
             excluded_rows['campaign_id'] = valid_df['campaign_id'].iloc[0]
             excluded_rows['created_at'] = datetime.now()
+            
+            
         
             # if required then add below step to dorp the table manually
             with engine.begin() as conn:
@@ -125,7 +127,7 @@ def execute_exclusion(input_df):
         
         # define our final exclusion list 
         total_exclusion_records = pd.DataFrame(columns=['customer_ref_no','exclusion_name','campaign_id','created_at'])
-        
+       
         # extracting exclusions from the input file 
         exclusion_rules = input_df['exclusion_rule'].iloc[0]
         
@@ -155,10 +157,20 @@ def execute_exclusion(input_df):
             logger.info(f"Current Rule valid rows     {len(valid_df)} ")
             logger.info(f"Toal  exclusion rows        {len(total_exclusion_records)} ")
             excl_start_df = valid_df.copy()
+            
+        # merge columns in valid df 
+        logger.debug(f'count before merge : {len(valid_df)} , excl_start_df : {len(excl_start_df)}')
+        valid_df = valid_df.merge(excl_start_df, how='left')
+        # valid_df = valid_df.reset_index(drop=True)
+        logger.debug(f'Merge Output : \n{valid_df.head()}')
+        logger.debug(f'count after merge : {len(valid_df)}')
+        logger.debug(f'count of columns  : {valid_df.shape[1]}')
     
     except Exception as e:
         raise(e)
         logger.error(f"Exception occurred : {e}")
+        
+        
         
     return valid_df,total_exclusion_records
     
