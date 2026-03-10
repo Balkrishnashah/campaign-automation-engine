@@ -12,6 +12,7 @@ from modules.liverun import process_liverun
 from modules.seedlist import process_seedlist
 from email_alert import send_alert
 from modules.export_validator import load_column_master,validate_columns
+from modules.email_campaign import execute_email_campaign
 
 import pandas as pd
 '''
@@ -108,7 +109,11 @@ def export_process(export_filename, filenm_shortnm, channel):
                 logger.debug(process_df.head())
                 
                 
-                
+                if channel.lower() == 'email':
+                    
+                    exe_status = execute_email_campaign()
+                    logger.info(f'Email Execution Status : {exe_status}')
+                    
                 
                 # attach communication id
                 '''
@@ -127,7 +132,6 @@ def export_process(export_filename, filenm_shortnm, channel):
                 # move_to_success = move_to_processed(export_filename)
                 
                 # send email module
-                
                 '''
                 analyst_email = "balkrishna.11.shah@gmail.com"
                 send_alert("success", analyst_email=analyst_email)
