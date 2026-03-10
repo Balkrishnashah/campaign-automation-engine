@@ -25,7 +25,8 @@ Current target channels:
 
 ## Implemented Modules
 
-- File reader and CSV dispatcher (`forward_integration.py`)
+### Data Ingestion Module
+- File reader and CSV dispatcher (`main.py`)
 - Export processing orchestrator (`export_process.py`)
 - File movement utilities (`camp_utils.py`)
   - move to in-progress
@@ -36,8 +37,6 @@ Current target channels:
 - Email alert module (`email_alert.py`)
   - success/failure alerts
 - Export column format validator (`modules/export_validator.py`)
-
-## Upcoming Modules
 
 ### 1) Seedlist and Live Run Check
 - Seedlist and liverun check
@@ -55,12 +54,16 @@ Current target channels:
 ### 3) Contact & Policy Modules
 - Contact matching module
 - Contact policy module
+- 
 
-### 4) Channel Check and Delivery
+## Upcoming Modules
+
+### 1) Channel Check and Delivery
 - Channel module split by channel (Email and SMS)
 - Communication ID logic
 - Build API for sending campaign via email
 - Build API for sending campaign via SMS
+- Store all the communication and campaing in Postgres DB
 
 ## Suggested File Naming Convention
 
@@ -80,6 +83,7 @@ Example:
 - `campaign/processed_failed` -> failed files
 - `campaign/logs` -> execution logs
 - `campaign/config/column_master.xlsx` -> expected column format
+- `campaign/config/exclusion_master.xlsx` -> expected Exclusion List 
 - `campaign_scripts/DB_files/campaign_audit.csv` -> audit history
 
 ## How to Run
@@ -87,7 +91,7 @@ Example:
 From project root:
 
 ```bash
-python campaign_scripts/forward_integration.py
+python campaign_scripts/main.py
 ```
 
 ## Logging and Audit
