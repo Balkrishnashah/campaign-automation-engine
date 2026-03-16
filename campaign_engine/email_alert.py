@@ -12,7 +12,7 @@ logger = logging.getLogger(__name__)
 SMTP_SERVER = "smtp.gmail.com"
 SMTP_PORT = 587
 SENDER_EMAIL = "balkrishna.datacurate@gmail.com"
-APP_PASSWORD = "ligu tzhw nyss tddb"
+APP_PASSWORD = "xxxxxxxxxxxx"
 
 CC_LIST = [
     # "balkrishna.datacurate@gmail.com"
